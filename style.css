@@ -5,8 +5,6 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
   background: #1e1b18;
   color: #fff7ec;
   scroll-behavior: smooth;
@@ -38,30 +36,15 @@ a {
   font-weight: 600;
   font-size: 20px;
 }
-nav {
+.side-menu {
   display: flex;
-}
-nav a {
-  margin-left: 25px;
-  font-size: 16px;
-  transition: 0.3s;
-  padding-bottom: 4px;
-}
-nav a:hover {
-  color: #c19a6b;
-}
-nav a.active {
-  color: #c19a6b;
-  font-weight: 600;
-  border-bottom: 2px solid #c19a6b;
+  gap: 25px;
 }
 .burger {
   display: none;
   font-size: 28px;
-  background: none;
-  border: none;
-  color: #fff;
   cursor: pointer;
+  color: #fff7ec;
 }
 .hero {
   height: 100vh;
@@ -121,7 +104,7 @@ nav a.active {
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 .card img {
   width: 100%;
@@ -171,28 +154,24 @@ footer .to-top {
   transform: translateY(0);
 }
 @media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #1e1b18;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 15px;
-  }
-  nav.show {
-    display: flex;
-  }
-  .burger {
-    display: block;
-  }
   .hero h1 {
     font-size: 32px;
   }
-  .card {
-    width: 100%;
-    max-width: 300px;
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    height: 100%;
+    background: #1e1b18;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  .side-menu.active {
+    right: 0;
   }
 }
