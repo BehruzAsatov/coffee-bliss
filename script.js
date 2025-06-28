@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger");
-  const nav = document.getElementById("nav");
+  const sideMenu = document.getElementById("side-menu");
 
   burger.addEventListener("click", () => {
-    nav.classList.toggle("show");
+    sideMenu.classList.toggle("active");
   });
 
   const faders = document.querySelectorAll(".fade-in");
