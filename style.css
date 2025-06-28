@@ -170,7 +170,7 @@ footer .to-top {
   opacity: 1;
   transform: translateY(0);
 }
-@media (max-width: 768pxxx) {
+@media (max-width: 768px) {
   nav {
     display: none;
     flex-direction: column;
